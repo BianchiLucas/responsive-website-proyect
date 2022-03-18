@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalSyle from './globalStyles'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from "./components/NavBar/Navbar";
 //Pages 
 import Home from "./pages/Home";
 import PricingPage from "./pages/PricingPage";
@@ -10,10 +11,11 @@ function App() {
   return (
     <Router>
       <GlobalSyle />
+      <Navbar/>
       <Routes>
         <Route path="/" exact element={< Home />} />
         <Route path="/signup" exact element={<SignUpPage/>} />
-        <Route  path="/pricingpage" exact element={<PricingPage/>} />
+        <Route  path="/pricing" exact element={<PricingPage/>} />
       </Routes>
 
     </Router>

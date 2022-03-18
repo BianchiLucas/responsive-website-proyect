@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import { FaRProject, FaTimes } from 'react-icons/fa'
 import { CgMenuRight} from 'react-icons/cg'
 import { IconContext } from 'react-icons'
-import {} from './NavbarStyles.js'
-import { useLocation, useHistory } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { data } from '../../data/NavbarData.js'
 import { Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavLinks, NavItem } from './NavbarStyles'
 
 const Navbar = () => {
     const [show, setShow] = useState(false)
 
-    let history = useHistory()
+    let navigate = useNavigate()
     let location = useLocation()
 
     const handleClick = () => {
@@ -29,7 +28,7 @@ const Navbar = () => {
         if (id & location.pathname === '/'){
             scrollTo(id)
         }
-        history.push(to)
+        navigate(to)
         setShow(false)
     }
 
@@ -38,7 +37,8 @@ const Navbar = () => {
           <Nav>
               <NavbarContainer>
                   <NavLogo to='/' >
-                      <NavIcon src='' alt='Logo' >NavIcon</NavIcon>
+                      <NavIcon src='./assets/imperial-icon.png' alt='Logo' />
+                      Logo
                   </NavLogo>
                   <MobileIcon onClick={handleClick}>{ show ? <FaTimes/> : <CgMenuRight/> }</MobileIcon>
                   <NavMenu show={show} >
