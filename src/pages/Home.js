@@ -1,6 +1,5 @@
-import React from "react";
-// Hero Carousel Feature Content
-import Hero from "../components/Hero/Hero";
+import React from "react"
+import Hero from "../components/Hero/Hero"
 
 const home = () => {
     return (

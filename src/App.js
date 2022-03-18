@@ -1,11 +1,11 @@
 import React from "react";
 import GlobalSyle from './globalStyles'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from "./components/NavBar/Navbar";
-//Pages 
+import Navbar from "./components/NavBar/Navbar"
+//Paginas  
 import Home from "./pages/Home";
-import PricingPage from "./pages/PricingPage";
-import SignUpPage from "./pages/SignUpPage";
+import PricingPage from "./pages/PricingPage"
+import SignUpPage from "./pages/SignUpPage"
 
 function App() {
   return (
