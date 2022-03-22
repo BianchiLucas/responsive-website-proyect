@@ -9,6 +9,9 @@ const home = () => {
         <>
             <Hero />
             <Features />
+            <Content {...heroOne} /> 
+            <Content {...heroTwo} /> 
+            <Content {...heroThree} /> 
         </>
     )
 }

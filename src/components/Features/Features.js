@@ -12,7 +12,7 @@ const Features = () => {
         opacity: 0
     }
     const animate = {
-        y: 0, 
+        y: 0,
         opacity: 1
     }
 
@@ -25,15 +25,15 @@ const Features = () => {
                     </FeatureTitle>
                 </FeatureTextWrapper>
                 <FeatureWrapper>
-                {FeatureData.map((element, index) => (
-                    <FeatureColumn initial={initial} animate={animate} transition={{ duration: 0.5 + index*0.1 }} key={index} >
-                        <FeatureImageWrapper>
-                            {element.icon}
-                        </FeatureImageWrapper>
-                        <FeatureName> {element.name} </FeatureName>
-                        <FeatureText> {element.description} </FeatureText>
-                    </FeatureColumn>
-                ))}
+                    {FeatureData.map((element, index) => (
+                        <FeatureColumn initial={initial} animate={animate} transition={{ duration: 0.5 + index * 0.1 }} key={index} >
+                            <FeatureImageWrapper>
+                                {element.icon}
+                            </FeatureImageWrapper>
+                            <FeatureName> {element.name} </FeatureName>
+                            <FeatureText> {element.description} </FeatureText>
+                        </FeatureColumn>
+                    ))}
                 </FeatureWrapper>
             </Container>
         </Section>

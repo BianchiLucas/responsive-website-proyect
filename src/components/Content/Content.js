@@ -10,7 +10,7 @@ const Content = ({ reverse, inverse, topLine, headine, description, buttonLabel,
 
     //Animación
     const initial = { opacity: 0, y: 30 }
-    const animation = useAnimation
+    const animation = useAnimation()
 
     const { ref, inView } = useInView({ threshold: 0.2 })
 
@@ -26,11 +26,11 @@ const Content = ({ reverse, inverse, topLine, headine, description, buttonLabel,
     return (
         <Section inverse={inverse} ref={ref} >
             <Container>
-                <ContentRow>
+                <ContentRow reverse={reverse} >
                     <ContentColumn>
                         <TextWrapper>
                             <TopLine initial={initial} transition={{ delay: 0.3, duration: 0.6 }} animate={animation} >
-                                {topLine.text}
+                                {topLine}
                             </TopLine>
                             <Heading initial={initial} transition={{ delay: 0.5, duration: 0.6 }} animate={animation} inverse={inverse} >
                                 {headine}
