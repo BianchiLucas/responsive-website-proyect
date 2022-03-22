@@ -19,15 +19,15 @@ export const FeatureWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 4rem;
-    column-gap: 2rem;
+    grid-gap: 2rem;
 
     @media screen and (max-width: 1100px) {
-        grid-template-columns: repeat(2, 1rfr);
+        grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 3rem;
     }
 
     @media screen and (max-width:568px) {
-        grid-template-columns: repeat(1, 1rfr);
+        grid-template-columns: repeat(1, 1fr);
     }
 `
 
@@ -38,7 +38,7 @@ export const FeatureColumn = styled(motion.div)`
     align-items: center;
     background: #f3f3f3;
     padding: 10px;
-    box-shadow: 0 0 32px #d0d0d0;
+    box-shadow: 0 0 32px 8px #d0d0d0;
     border-radius: 20px;
 `
 
