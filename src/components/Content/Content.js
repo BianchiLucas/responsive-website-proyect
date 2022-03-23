@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 
 
-const Content = ({ reverse, inverse, topLine, headine, description, buttonLabel, img, alt, primary }) => {
+const Content = ({ reverse, inverse, topLine, headLine, description, buttonLabel, img, alt, primary }) => {
 
     //Animación
     const initial = { opacity: 0, y: 30 }
@@ -33,7 +33,7 @@ const Content = ({ reverse, inverse, topLine, headine, description, buttonLabel,
                                 {topLine}
                             </TopLine>
                             <Heading initial={initial} transition={{ delay: 0.5, duration: 0.6 }} animate={animation} inverse={inverse} >
-                                {headine}
+                                {headLine}
                             </Heading>
                             <Subtitle initial={initial} transition={{ delay: 0.7, duration: 0.6 }} animate={animation} inverse={inverse} >
                                 {description}
