@@ -2,10 +2,12 @@ import React from "react";
 import GlobalSyle from './globalStyles'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from "./components/NavBar/Navbar"
+import Footer from "./components/Footer/Footer"
 //Paginas  
 import Home from "./pages/Home";
 import PricingPage from "./pages/PricingPage"
 import SignUpPage from "./pages/SignUpPage"
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/signup" exact element={<SignUpPage/>} />
         <Route  path="/pricing" exact element={<PricingPage/>} />
       </Routes>
+      <Footer />
 
     </Router>
   );

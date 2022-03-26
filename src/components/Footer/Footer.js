@@ -1,12 +1,12 @@
 import React from 'react'
 import { Section, Row } from '../../globalStyles'
 import { footerData, footerSocialData } from '../../data/FooterData'
-import { FooterContainer, FooterWrapper, FooterSubscription, FooterSubHeading, FooterRow, FooterGrid, FooterColumn, FooterSubText, FooterLinkContainer, FooterLinkItems, FooterLink, FooterLogo, SocialIcon, FooterRights, FooterSocialIcon, FooterAddress } from './FooterStyles'
+import { FooterWrapper, FooterGrid, FooterColumn, FooterLinkItems, FooterLinkTilte, FooterLink, FooterLogo, SocialIcon, FooterRights, FooterSocialIcon, FooterAddress } from './FooterStyles'
 
 
 const Footer = () => {
   return (
-      <Section padding="4rem 0 2rem 0" >
+      <Section padding="4rem 0 1rem 0" >
           <FooterWrapper>
               <FooterGrid justify="space-betwen">
                   <FooterColumn id="footerLogo" >
@@ -17,14 +17,23 @@ const Footer = () => {
                           Holy Terra, Segmentum Solar
                       </FooterAddress>
                       <Row align="center" margin="auto 0 0 0" gap="1rem" >
-                          {footerSocialData.map((item, index) => (
+                          {footerSocialData.map((social, index) => (
                               <FooterSocialIcon key={index} href="/" target="_blank" aria-label={social.name} >
                                   {social.icon}
                               </FooterSocialIcon>
                           ))}
                       </Row>
                   </FooterColumn>
+                  {footerData.map((footerItem, index) => (
+                      <FooterLinkItems key={index} >
+                          <FooterLinkTilte> {footerItem.title} </FooterLinkTilte>
+                          {footerItem.links.map((link, linkIndex) => (
+                              <FooterLink key={linkIndex} to="/" > {link} </FooterLink>
+                          ))}
+                      </FooterLinkItems>
+                  ))}
               </FooterGrid>
+              <FooterRights>Imperium of Mankind © 31st Milenium</FooterRights>
           </FooterWrapper>
       </Section>
   )

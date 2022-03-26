@@ -63,6 +63,8 @@ export const FooterGrid = styled.div`
 `
 
 export const FooterColumn = styled(Column)`
+    margin: auto;
+
     @media screen and (max-width: 999px) {
         align-items: center;
         grid-column: 1/-1;
@@ -98,6 +100,10 @@ export const FooterLinkItems = styled.div`
     }
 `
 
+export const FooterLinkTilte = styled.h2`
+    margin-bottom: 16px;
+`
+
 export const FooterLink = styled(Link)`
 	color: #fff;
 	text-decoration: none;
@@ -127,12 +133,12 @@ export const SocialIcon = styled.img`
 
 export const FooterRights = styled.div`
 	color: #fff;
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 	width: 100%;
 	font-size: 0.8rem;
 	text-align: center;
 	border-top: 1px solid #2d3748;
-	padding: 1rem 0;
+	padding: 1rem 0 0.5rem;
 	margin: 1rem 0 0;
 `
 
