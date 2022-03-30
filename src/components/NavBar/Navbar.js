@@ -37,7 +37,7 @@ const Navbar = () => {
           <Nav>
               <NavbarContainer>
                   <NavLogo to='/' >
-                      <NavIcon src='./assets/imperial-icon.png' alt='Logo' />
+                      <NavIcon src='./assets/imperial-icon2.png' alt='Logo' />
                       IMPERIUM OF MANKIND
                   </NavLogo>
                   <MobileIcon onClick={handleClick}>{ show ? <FaTimes/> : <CgMenuRight/> }</MobileIcon>

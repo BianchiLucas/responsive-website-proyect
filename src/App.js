@@ -15,19 +15,19 @@ function App() {
   return (
     <Router>
       <GlobalSyle />
-      <Suspense 
+      <Suspense
         fallback={
           <Loader>
             <PuffLoader color="#fff" size={150} />
           </Loader>
         }>
-      <NavBar/>
-      <Routes>
-        <Route path="/" exact element={< Home />} />
-        <Route path="/signup" exact element={<SignUpPage/>} />
-        <Route  path="/pricing" exact element={<PricingPage/>} />
-      </Routes>
-      <Footer />
+        <NavBar />
+        <Routes>
+          <Route path="/" exact element={< Home />} />
+          <Route path="/signup" exact element={<SignUpPage />} />
+          <Route path="/pricing" exact element={<PricingPage />} />
+        </Routes>
+        <Footer />
       </Suspense>
     </Router>
   );
