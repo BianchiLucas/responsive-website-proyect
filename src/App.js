@@ -1,26 +1,34 @@
-import React from "react";
-import GlobalSyle from './globalStyles'
+import React, { Suspense, lazy } from "react";
+import GlobalSyle, { Loader } from './globalStyles'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from "./components/NavBar/Navbar"
-import Footer from "./components/Footer/Footer"
+import PuffLoader from "react-spinners/ClipLoader"
+//Lazy components
+const NavBar = lazy(() => import("./components/NavBar/Navbar"))
+const Footer = lazy(() => import("./components/Footer/Footer"))
 //Paginas  
-import Home from "./pages/Home";
-import PricingPage from "./pages/PricingPage"
-import SignUpPage from "./pages/SignUpPage"
+const Home = lazy(() => import("./pages/Home"))
+const PricingPage = lazy(() => import("./pages/PricingPage"))
+const SignUpPage = lazy(() => import("./pages/SignUpPage"))
 
 
 function App() {
   return (
     <Router>
       <GlobalSyle />
-      <Navbar/>
+      <Suspense 
+        fallback={
+          <Loader>
+            <PuffLoader color="#fff" size={150} />
+          </Loader>
+        }>
+      <NavBar/>
       <Routes>
         <Route path="/" exact element={< Home />} />
         <Route path="/signup" exact element={<SignUpPage/>} />
         <Route  path="/pricing" exact element={<PricingPage/>} />
       </Routes>
       <Footer />
-
+      </Suspense>
     </Router>
   );
 }

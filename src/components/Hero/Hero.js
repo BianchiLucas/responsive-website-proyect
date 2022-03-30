@@ -8,11 +8,11 @@ const Hero = () => {
         <HeroSection>
             <HeroVideo src="./assets/Terra.mp4" autoPlay muted loop></HeroVideo>
             <Container>
-                <MainHeading>Main Heading Text</MainHeading>
-                <HeroText>Hero Text</HeroText>
+                <MainHeading>JOIN THE GREAT CRUSADE NOW</MainHeading>
+                <HeroText>FOR THE IMPERIUM OF MANKIND</HeroText>
                 <ButtonWrapper>
                     <Link to={"signup"}>
-                        <Button>Get started</Button>
+                        <Button>Get Enrolled</Button>
                     </Link>
                     <HeroButton>Find more</HeroButton>
                 </ButtonWrapper>

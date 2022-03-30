@@ -25,7 +25,7 @@ const Navbar = () => {
      }
 
     const closeMobileMenu = (to, id) => {
-        if (id & location.pathname === '/'){
+        if (id && location.pathname === '/') {
             scrollTo(id)
         }
         navigate(to)
@@ -38,7 +38,7 @@ const Navbar = () => {
               <NavbarContainer>
                   <NavLogo to='/' >
                       <NavIcon src='./assets/imperial-icon.png' alt='Logo' />
-                      Logo
+                      IMPERIUM OF MANKIND
                   </NavLogo>
                   <MobileIcon onClick={handleClick}>{ show ? <FaTimes/> : <CgMenuRight/> }</MobileIcon>
                   <NavMenu show={show} >

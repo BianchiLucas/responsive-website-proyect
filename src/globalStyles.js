@@ -137,4 +137,13 @@ export const Button = styled.button`
     }
 `
 
+export const Loader = styled.div`
+    background: black;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+`   
+
 export default GlobalStyle

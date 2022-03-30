@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { Container, Section } from '../../globalStyles'
 import { FeatureText, FeatureTitle, FeatureWrapper, FeatureColumn, FeatureImageWrapper, FeatureName, FeatureTextWrapper } from './FeaturesStyles'
 import { FeatureData } from '../../data/FeatureData'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion'
 
 
 const Features = () => {
@@ -11,22 +13,27 @@ const Features = () => {
         y: 40,
         opacity: 0
     }
-    const animate = {
-        y: 0,
-        opacity: 1
-    }
+
+    const animate = useAnimation()
+    const { ref, inView } = useInView({ threshold: 0.5 })
+    useEffect(() => {
+        if (inView) {
+            animate.start({ y: 0, opacity: 1 })
+        }
+    })
+    
 
     return (
-        <Section position='relative' id='about' inverse smPadding='50px 10px' >
+        <Section position='relative' id='about' inverse smPadding='50px 10px' ref={ref}>
             <Container>
                 <FeatureTextWrapper>
                     <FeatureTitle>
-                        What we offer
+                        Be part of a new era
                     </FeatureTitle>
                 </FeatureTextWrapper>
                 <FeatureWrapper>
                     {FeatureData.map((element, index) => (
-                        <FeatureColumn initial={initial} animate={animate} transition={{ duration: 0.5 + index * 0.1 }} key={index} >
+                        <FeatureColumn initial={initial} animate={animate} transition={{ duration: 0.5 + index * 0.2 }} key={index} >
                             <FeatureImageWrapper>
                                 {element.icon}
                             </FeatureImageWrapper>

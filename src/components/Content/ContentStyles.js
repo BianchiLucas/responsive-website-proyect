@@ -78,7 +78,7 @@ export const Subtitle = styled(motion.p)`
 ` 
 
 export const ContentButton = styled(motion.button)`
-    height: 3rem;
+    height: 60px;
     padding: 16px 32px;
     font-weight: 700;
     font-size: 0.8rem;

@@ -61,8 +61,12 @@ export const PricingCardInfo = styled.div`
     display: flex;
     flex-direction: column;
     padding: 24px;
-    color: "#fff";
+    color: #fff;
     margin: auto;
+
+    &:hover {
+        background: #3d3d3d;
+    }
 
     > button {
         margin-top: auto;
@@ -112,7 +116,7 @@ export const PricingCardFeature = styled.li`
     font-size: 0.9rem;
 
     &:before {
-        content: '🎧';
+        content: '✔️ ';
         margin-right: 0.4rem;
     }
 `

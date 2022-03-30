@@ -6,7 +6,7 @@ export const data = [
     },
     {
         to: 'pricing',
-        text: 'Pricing'
+        text: 'Armed Forces'
     },
     {
         to: 'signup',

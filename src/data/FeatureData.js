@@ -5,7 +5,7 @@ import { GoTelescope } from 'react-icons/go'
 
 
 
-const iconStyle = (Icon) => <Icon size='3rem' color='#0f0f0f' />
+const iconStyle = (Icon) => <Icon size='60px' color='#0f0f0f' />
 
 export const FeatureData = [
     {

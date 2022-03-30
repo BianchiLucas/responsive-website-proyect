@@ -18,7 +18,7 @@ const Carousel = () => {
           Find more about the Galaxy
         </Heading>
         <ButtonContainer>
-          <IconContext.Provider value={{ size: '3rem', color: '#1d609c' }}>
+          <IconContext.Provider value={{ size: '40px', color: '#1d609c' }}>
             <FaArrowCircleLeft onClick={sliderRef?.slickPrev} />
             <FaArrowCircleRight onClick={sliderRef?.slickNext} />
           </IconContext.Provider>
@@ -28,7 +28,7 @@ const Carousel = () => {
       <ReviewSlider {...sliderSettings} ref={setSliderRef}>
         {
           data.map((element, index) => (
-            <ImageWrapper kew={index}>
+            <ImageWrapper key={index}>
               <CarouselImage src={element.image} />
               <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold' >
                 {element.title}
