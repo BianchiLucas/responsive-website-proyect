@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormSection, FormTitle, FormContainer, FormColumn, FormRow, FormWrapper, FormMessage, FormInputRow, FormInput, FormLabel, FormImgWrapper, FormiImg, FormButton } from "./FormStyles";
+import { FormSection, FormTitle, FormColumn, FormRow, FormWrapper, FormMessage, FormInputRow, FormInput, FormLabel, FormButton } from "./FormStyles";
 import { Container } from "../../globalStyles";
 import validateForm from './FormValidation'
 
@@ -51,7 +51,7 @@ const Form = () => {
                                     <FormLabel> {element.label} </FormLabel>
                                     <FormInput
                                         type={element.type}
-                                        placeholder={ (element.label == 'Confirm Password') ? 'Confirm your password' : `Enter your ${element.label.toLocaleLowerCase()}` }
+                                        placeholder={ (element.label === 'Confirm Password') ? 'Confirm your password' : `Enter your ${element.label.toLocaleLowerCase()}` }
                                         value={element.value}
                                         onChange={element.onChange}
                                     />

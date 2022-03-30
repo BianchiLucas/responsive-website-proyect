@@ -13,10 +13,6 @@ export const FormTitle = styled.h1`
     font-weight: 600;
 `
 
-export const FormContainer = styled.div`
-    display: flex;
-`
-
 export const FormColumn = styled.div`
     padding: 50px;
     background: white;
@@ -93,21 +89,6 @@ export const FormLabel = styled.label`
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
     color: #afafaf;
-`
-
-export const FormImgWrapper = styled.div`
-    max-width: 555px;
-    display: flex;
-    justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
-`
-
-export const FormiImg = styled.img`
-    padding-right: 0;
-    border: 0;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    max-height: 500px;
 `
 
 export const FormButton = styled.button`
