@@ -14,7 +14,9 @@ const Hero = () => {
                     <Link to={"signup"}>
                         <Button>Get Enrolled</Button>
                     </Link>
-                    <HeroButton>Find more</HeroButton>
+                    <Link to={"pricing"}>
+                        <HeroButton>Find more</HeroButton>
+                    </Link>
                 </ButtonWrapper>
             </Container>
         </HeroSection>
