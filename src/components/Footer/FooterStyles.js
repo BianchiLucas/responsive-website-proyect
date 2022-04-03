@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { Column, Row } from '../../globalStyles'
+import { Column, Row, Section } from '../../globalStyles'
 import { Link } from 'react-router-dom'
 
-export const FooterContainer = styled.div`
-    background-color: #101522;
-    padding: 4rem 0 2rem 0;
+export const FooterSection = styled(Section)`
+    background-color: #181D31;
+    padding: 4rem 0 1rem 0;
 `
 
 export const FooterWrapper = styled.div`
@@ -148,7 +148,7 @@ export const FooterSocialIcon = styled.a`
 `
 
 export const FooterAddress = styled.div`
-	color: white;
+	color: #fff;
 	margin: 0.4rem auto 0.4rem;
 	max-width: 20rem;
 	font-weight: 500;

@@ -18,7 +18,7 @@ const Carousel = () => {
           Find more about the Galaxy
         </Heading>
         <ButtonContainer>
-          <IconContext.Provider value={{ size: '40px', color: '#1d609c' }}>
+          <IconContext.Provider value={{ size: '40px', color: '#192034' }}>
             <FaArrowCircleLeft onClick={sliderRef?.slickPrev} />
             <FaArrowCircleRight onClick={sliderRef?.slickNext} />
           </IconContext.Provider>

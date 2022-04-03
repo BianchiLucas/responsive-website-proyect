@@ -1,12 +1,12 @@
 import React from 'react'
 import { Section, Row } from '../../globalStyles'
 import { footerData, footerSocialData } from '../../data/FooterData'
-import { FooterWrapper, FooterGrid, FooterColumn, FooterLinkItems, FooterLinkTilte, FooterLink, FooterLogo, SocialIcon, FooterRights, FooterSocialIcon, FooterAddress } from './FooterStyles'
+import { FooterSection, FooterWrapper, FooterGrid, FooterColumn, FooterLinkItems, FooterLinkTilte, FooterLink, FooterLogo, SocialIcon, FooterRights, FooterSocialIcon, FooterAddress } from './FooterStyles'
 
 
 const Footer = () => {
   return (
-      <Section padding="4rem 0 1rem 0" >
+      <FooterSection  >
           <FooterWrapper>
               <FooterGrid justify="space-betwen">
                   <FooterColumn id="footerLogo" >
@@ -35,7 +35,7 @@ const Footer = () => {
               </FooterGrid>
               <FooterRights>Imperium of Mankind © 31st Milenium</FooterRights>
           </FooterWrapper>
-      </Section>
+      </FooterSection>
   )
 }
 

@@ -87,7 +87,7 @@ export const ContentButton = styled(motion.button)`
     text-transform: uppercase;
     cursor: pointer;
     background: none;
-    color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+    color: ${({ inverse }) => (inverse ? '#181D31' : 'white')};
     border-radius: 4px;
     white-space: nowrap;
     padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
@@ -99,7 +99,7 @@ export const ContentButton = styled(motion.button)`
     overflow: hidden;
 
     &:before {
-        background: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+        background: ${({ inverse }) => (inverse ? '#181D31' : 'white')};
         content: '';
         position: absolute;
         top: 50%;

@@ -3,10 +3,11 @@ import { motion } from 'framer-motion'
 
 export const FormSection = styled.div`
     padding: 160px 0;
-    background: #101522;
+    background: #192034;
 `
 
 export const FormTitle = styled.h1`
+color: #cfcfcf;
     margin-bottom: 24px;
     font-size: 48px;
     line-height: 1.1;
@@ -15,7 +16,7 @@ export const FormTitle = styled.h1`
 
 export const FormColumn = styled.div`
     padding: 50px;
-    background: white;
+    background: #242424;
     border: 20px;
     flex: 1;
     max-width: 60%;
@@ -24,6 +25,7 @@ export const FormColumn = styled.div`
     align-items: center;
     border-radius: 20px;
     flex-direction: column;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
 
     @media screen and (max-width:768px) {
         max-width: 100% !important;
@@ -79,9 +81,11 @@ export const FormInput = styled.input`
     border-radius: 2px;
     height: 40px;
     width: 100%;
+    color: #cfcfcf;
     border: none;
     border-bottom: 1px solid #cfcfcf;
     font-size: 1rem;
+    background-color: #242424;
 `
 
 export const FormLabel = styled.label`
@@ -92,6 +96,7 @@ export const FormLabel = styled.label`
 `
 
 export const FormButton = styled.button`
+    color: #cfcfcf;
     border-radius: 4px;
     background: none;
     margin-top: 1.5rem;
@@ -100,7 +105,7 @@ export const FormButton = styled.button`
     width: 100%;
     font-size: 1.4rem;
     padding: 5px 15px; 
-    border: 2px solid black;
+    border: 2px solid white;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -108,7 +113,7 @@ export const FormButton = styled.button`
     &:hover {
         color: white;
         transition: background-color 0.4s ease-in;
-        background-color: black;
+        background-color: white;
 }
 `
 
